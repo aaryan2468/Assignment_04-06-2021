@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Replacer</title>
+	<style type="text/css">
+		.container{
+			width: 300px;
+			margin: auto;
+			margin-top: 15%;
+			border: 1px solid black;
+			text-align: center;
+			padding: 30px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<label for="sample"> Enter Your any text Here: </label>
+	<input type="text" name="sample" id="sample">
+	<br><br>
+
+	<button onclick="enter();">Enter</button>
+
+	<br><br>
+	<label for="replace"> Enter any word to get replaced: </label>
+	<input type="text" name="replace1" id="replace1">
+	<br><br>
+	<label for="replaced">  Enter any word to replace: </label>
+	<input type="text" name="replace2" id="replace2">
+	<br><br>
+
+	<button onclick="replacer();">Replace</button>
+
+	<br><br>
+	<div id="view"></div>
+</div>
+</body>
+
+<script type="text/javascript">
+	function enter(){
+		var text = document.getElementById('sample').value;
+		document.getElementById('view').innerHTML = text;
+	}
+
+	function replacer(){
+		var replace_1 = document.getElementById('replace1').value;
+		var replace_2 = document.getElementById('replace2').value;
+
+		document.getElementById('view').innerHTML = document.getElementById('view').innerHTML.replace(replace_1, replace_2);
+	}
+</script>
+
+</html>
